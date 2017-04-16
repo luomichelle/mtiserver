@@ -1,169 +1,778 @@
-html{
-	height:100%;
-	background-color: black;
-}
 body {
-	width:1024px;
-	height: 100%;
-	margin:0 auto;
-}
-h1{
-	padding-top: 20px;
-	width: 600px;
-	margin: auto;
-	color: deepskyblue;
-	font-size: 60px;
-}
-#city {
-	background-image: url("../../assets/images/city.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-	z-index: -30;
-	height: 100%;
+  /*padding: 50px;*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:   #F5F5F5;
+  
+  background-repeat: no-repeat;
+  background-size:cover;
+  /*background-position: center center;*/
+
 }
 
-.container {
-  width: 400px;
-  height: 100%;
-	margin:2% auto;
-  position: relative;
-  perspective: 1000px;
+strong{
+  font-weight: 700;
 }
 
-#cube {
+.truckbtn {
+  margin: 15px 5px 5px 10px;
+}
+.logotxt {
+  font-size: 40px;
 
-	margin:8% auto 0 auto;
-  width: 400px;
-  height: 400px;
-  transform-style: preserve-3d;
-  transform: translateZ( -100px );
-/*  opacity: 0.3;*/
+}
+.img-avatar {
+  max-width: 100px;
+}
+.signup-div {
+  margin-top: 250px;
+  width: 33%;
+  float: right;
 }
 
-#cube figure {
-  margin: 0;
-  width: 400px;
-  height: 400px;
-  display: block;
-  position: absolute;
-  border: 3px solid black;
-  cursor: pointer;
-	overflow: auto;
+.navbar {
+  background-color: white;
+  color: #74baed;
+  padding-bottom: 5px;
+  border: 0;
 }
+.navbar-brand {
+	font: 40px Helvetica, Arial, sans-serif;
 
-#face-color{
-	background-color: deepskyblue;
-	opacity: 0.075;
-	width: 400px;
-	height: 400px;
-	position: absolute;
 }
-
-
-#cube .front  { transform: rotateY(   0deg ) translateZ( 202px ); }
-#cube .back   { transform: rotateX( 180deg ) translateZ( 202px ); }
-#cube .right  { transform: rotateY(  90deg ) translateZ( 202px ); }
-#cube .left   { transform: rotateY( -90deg ) translateZ( 202px ); }
-#cube .top    { transform: rotateX(  90deg ) translateZ( 202px ); }
-#cube .bottom { transform: rotateX( -90deg ) translateZ( 202px ); }
-
-#cube.show-front  { transform: translateZ( -100px ) rotateY(    0deg ); }
-#cube.show-back   { transform: translateZ( -100px ) rotateX( -180deg ); }
-#cube.show-right  { transform: translateZ( -100px ) rotateY(  -90deg ); }
-#cube.show-left   { transform: translateZ( -100px ) rotateY(   90deg ); }
-#cube.show-top    { transform: translateZ( -100px ) rotateX(  -90deg ); }
-#cube.show-bottom { transform: translateZ( -100px ) rotateX(   90deg ); }
-
-#cube { transition: transform 2s; }
-
-#headline{
-	color: white;
-	font-size: 40px;
-	opacity: .85;
-}
-
-#typewriter-headline, #typewriter-summary{
-	color: white;
-	font-weight: bold;
-	font-size: 26px;
-	line-height:38px;
-	z-index: 10;
-	padding:20px;
-}
-#typewriter-summary{
-	padding-top: 0;
-}
-
-#seek-box{
-	/*	background-color: white;*/
-	position: absolute;
-	width: 100px;
-	height: 100px;
-	left: 100px;
-	bottom: 100px;
-	background-image: url("../../assets/images/cube2.png");
-	cursor: pointer;
-}
-#input-area{
-	float:left;
-	margin-top:2%;
-}
-#input-box input[type="text"], textarea {
-	color: deepskyblue;
-	background-color : black;
-    text-align: left;
-    padding-top: 1px;
-    width: 200px;
-    height: 300px;
-    font-size: 20px;
-    opacity: .78;
-}
-
-#note-button {
-  color: black;
-  opacity: .45;
-	background-color : deepskyblue;
-	width: 200px;
-	height: 110px;
-}
-
-#saved-area{
+.navbar-ex1-collapse {
 	float:right;
-	margin-top:2%;
-}
-#note-box {
-	background-color: black;
-    font-size: 20px;
-    opacity: .58;
-    width: 200px;
-    height: 300px;
 }
 
-#delete-button {
+a {
+  /*color: #00B7FF;*/
+  /*color: red;*/
+}
+
+.thumbnail img{        
+   max-height: 147px;
+}
+
+.glyphicon.glyphicon-road {
+    font-size: 50px;
+}
+
+
+/*-----------Mapbox direction*/
+#inputs,
+#errors,
+#directions {
+    position: absolute;
+    width: 33.3333%;
+    max-width: 220px;
+    min-width: 200px;
+}
+
+#inputs {
+    z-index: 10;
+    top: 70px;
+    left: 50px;
+}
+
+#directions {
+    z-index: 99;
+    background: rgba(0,0,0,.8);
+    top: 252px;
+    right: 35px;
+    bottom: 0;
+    overflow: auto;
+}
+
+#errors {
+    z-index: 8;
+    opacity: 0;
+    padding: 10px;
+    border-radius: 0 0 3px 3px;
+    background: rgba(0,0,0,.25);
+    top: 90px;
+    left: 10px;
+}
+
+
+.form-box {
+  margin-top: 100px;
+}
+
+.inner-bg {
+  /*<img id="towimage" src="/assets/img/tow-truck-banner1.jpg" alt="Banner Image"/>*/
+  background: url(/assets/img/shaking_hands_trucker.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.page-scroll {
+  color: black !important;
+}
+
+
+/*-----Profile Sidebar CSS*/
+.profile {
+  margin: 60px 0;
+}
+.user-name {
+  text-transform: capitalize;
+}
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  margin-top: 30px;
+  background: #fff;
+}
+
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+    
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+  margin-top: 30px;
+  padding: 20px;
+  background: #337AB7;
+  min-height: 460px;
+  box-shadow: 5px 2px 2px black;
+  border-radius: 15px;
+}
+.form-rows {
+  padding: 0;
+}
+
+/*navigator */
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:gray;
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+
+.navbar-brand {
+   padding: 0;
+  }
+.navbar-custom {
+  background: #ffffff;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  font-size:15px;
+  padding: 1%;
+}
+
+#become-host{
+    color: #ffffff;
+    background-color: #19b9e7;
+}
+
+#become-host:after{
+  background-color: transparent;  
+} 
+
+#watch-demo{
     color: black;
-    opacity: .65;
-	background-color : darkslategray;
-	width: 200px;
-	height: 110px;
-	cursor: pointer;
+    margin-right:2%;
 }
 
-.button {
-	width: 80px;
-	height: 80px;
-	display:block;
-	margin:0px auto;
-	padding:10px;
-	cursor: pointer;
+
+.navbar-custom a:focus {
+  outline: none;
+}
+.navbar-custom .navbar-brand {
+  color: black;
+}
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-brand:active,
+.navbar-custom .navbar-brand.active {
+  color: gray;
+}
+.navbar-custom .navbar-nav {
+  letter-spacing: 1px;
+}
+.navbar-custom .navbar-nav li a:after {
+  color: #9e9e9e;    
+  background: none repeat scroll 0 0 transparent;
+  text-decoration: none;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 30%;
+  position: relative;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  font-size:18;
+  display: inline-block;
+  -webkit-text-stroke-width: 0px;
+  font-weight: lighter;
+}
+.navbar-custom .navbar-nav li after:hover:after {  
+  width: 35%; 
+  left: 11%; 
 }
 
-@media screen and (min-height:900px) {
-	.container, #input-area, #saved-area{
-		margin-top: 20%;
-	}
+.navbar-custom .navbar-nav li a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 30%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 
-	#cube {
-		margin-top: 15%;
-	}
 }
+.navbar-custom .navbar-nav li a:hover:after {  
+  width: 35%; 
+  left: 11%; 
+}
+.navbar-custom .navbar-nav li.active a:hover,
+.navbar-custom .navbar-nav li.active a:focus,
+.navbar-custom .navbar-nav li.active a:active {
+  color: white;
+  background: black;
+}
+.navbar-custom .navbar-toggle {
+  color: black;
+  text-transform: uppercase;
+  font-size: 10px;
+  border-color: white;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+section {
+  padding: 100px 0;
+}
+section h2 {
+  margin: 0;
+  font-size: 3em;
+}
+section.success {
+  background: #18BC9C;
+  color: white;
+}
+
+/*/nav   */
+
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+/*/navigator//
+
+
+/*home page */
+
+.home-page-signup{
+    background-color: #3c3c3c;
+    position: absolute;
+    padding-right: 0;
+    padding-left: 0;
+    width: 60%;
+    padding-top: 5%;
+    z-index: 500;
+    line-height: 5;
+    right: 0px;
+    border-top: 10px solid #19b9e7;
+    border-radius: 5%;
+}
+
+
+#featurette-about.featurette{
+    font-family: Myriad Pro;
+    font-size: 12px;
+    font-weight: normal;
+    padding-bottom: 30px;
+    text-align: left;
+}
+.intro-text .name {
+    font-size: 400%;
+
+    }
+.intro-text .skills {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  font-size:30px;
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: black;
+  -webkit-transform: scaleY(1.0);
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.intro-header {
+    padding-top: 10%; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    text-align: center;
+    color: black;
+    background-size: cover;
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    background-color: #ffffff;
+    text-align: left;
+    color:black;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+    color:black;
+    font-size:250%;
+    font-family: "Helvetica Neue",Helvetica,sans-serif!important;
+    font-weight: 400;
+
+
+}
+
+.section-introduction{
+  color:black;
+  line-height: 180%;
+  padding: 2%;
+}
+.section-heading-spacer {
+    float: left;
+    width: 50px;
+    border-top: 3px solid #111111;
+}
+
+
+/*banner*/
+
+.tow-truck-banner{
+  float:left;
+  width:100%;
+}
+
+img#towimage{
+
+}
+
+#bannersize{
+  padding:0%;
+}
+
+
+#banner-container,
+#banner-group{
+  display: inline-table;
+  float:left;
+}
+
+.banner-group { 
+  display: table; 
+}
+.banner-section { 
+    display: table-cell;
+    font-size: 27px;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ebebeb;
+}
+.banner-text { 
+  white-space: nowrap; 
+  width: 1%; 
+  padding: 0 5px; 
+}
+.banner-line { 
+    border-bottom: 2px solid #f8f8f8;
+    position: relative;
+    top: -0.8em;
+}
+#banner-text-b{
+  color:gray;
+
+}
+/*/banner*/
+/*socialicon*/
+
+.socialicon-container{
+    padding-top: 100px;
+}
+
+img.socialicons{
+    position: relative;
+    z-index: 5;
+    width: 30px;
+    border-radius: 50%;
+}
+/*/socialicon*/
+/*footer*/
+footer {
+    padding: 50px 0;
+    text-align: center;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+/*/footer*/
+/*media query*/
+
+/*MyStyles:Jose;*/
+.callATruckText{
+  font-family:"Impact," "Charcoal", "sans-serif";
+  font-size: 50px;
+}
+
+@media (min-width: 1200px){
+.container {
+    width: 1200px;
+    }
+ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+}
+
+
+#banner-container,
+#banner-group{
+  display:inline-flex;
+  float:left;
+}
+
+.banner-group { 
+  display: table; 
+}
+.banner-section { 
+    display: table-cell;
+    font-size: 27px;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ebebeb;
+}
+.banner-text { 
+  white-space: nowrap; 
+  width: 1%; 
+  padding: 0 40px; 
+}
+.banner-line { 
+    border-bottom: 2px solid #f8f8f8;
+    position: relative;
+    top: -0.8em;
+}
+#banner-text-b{
+  color:gray;
+
+}
+#requests{
+  width:100%;
+  height:100%;
+  overflow: scroll;
+}
+
+#requestUser{
+  width:100%;
+  border-radius: 50px;
+  border-color:  #4CAF50;
+  margin-bottom: 15px;
+  background-color: #4CAF50;
+}
+/*/banner*/
+
+section {
+    padding: 75px 0;
+  }
+section.first {
+    padding-top: 75px;
+  }
+
+.navbar-right {
+    margin-right: 23px;
+  }
+
+.intro-text .skills {
+    font-size: 60px;
+  }
+.intro-message {
+    padding-bottom: 15%;
+  }
+
+.intro-message > h1 {
+    font-size: 3em;
+  }
+
+/*slogan*/
+.slogan{
+    color: white;
+    margin-top: 0;
+}
+
+/*---------demo container in index-----------------*/
+section#demo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1%;
+    background-color:#d9534f;
+    padding:2%;
+}
+
+.video-container{
+  background-color:#19b9e7;
+}
+
+.video {
+  display: block;
+  width: 800px;
+  height:600px;
+  margin: 0 auto; 
+} 
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+@media (max-width: 920px){
+.intro-header {
+    padding-top: 15%;
+  }
+.intro-text .name {
+    font-size: 250%;
+}
+.home-page-signup {
+  top: -150px;
+  width: 45%
+}
+
+
+@media (max-width: 780px){
+/*nav */
+/*  .container>.navbar-header {
+    float: left;
+  }
+  .navbar-custom {
+    padding: 5px 0;
+    -webkit-transition: padding 0.3s;
+    -moz-transition: padding 0.3s;
+    transition: padding 0.3s;
+  }
+  .navbar-custom .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .navbar-custom.affix {
+    padding: 10px 0;
+  }
+  .navbar-custom.affix .navbar-brand {
+    font-size: 1.5em;
+  }*/
+/*header*/
+.intro-header {
+    padding-top: 15%;
+  }
+.intro-text .name {
+    font-size: 250%;
+}
+.home-page-signup {
+  display:none;
+}
+
+
