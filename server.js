@@ -13,8 +13,6 @@ var bparser = require('body-parser');
 // Model controllers (rather than routes)
 var application_controller = require('./controllers/application_controller');
 
-
-
 // Express settings
 
 // Instantiate the app
@@ -34,7 +32,7 @@ app.set('views', path.join(__dirname, 'views'));
 var exphbs = require('express-handlebars');
 
 app.engine('handlebars', exphbs({
-    defaultLayout: 'main'
+    defaultLayout: 'main-registration'
 }));
 
 app.set('view engine', 'handlebars');
