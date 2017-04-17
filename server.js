@@ -12,9 +12,7 @@ var bparser = require('body-parser');
 
 // Model controllers (rather than routes)
 var application_controller = require('./controllers/application_controller');
-var character_controller = require('./controllers/character_controller');
-var user_controller = require('./controllers/user_controller');
-var truck_controller = require('./controllers/truck_controller');
+
 
 
 // Express settings
@@ -48,9 +46,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', application_controller);
-app.use('/characters', character_controller);
-app.use('/users', user_controller);
-app.use('/trucks', truck_controller);
+
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 // var pwUtil = require('../helpers/password');
 var bcrypt = require('bcryptjs');
-var User = require('../models').Truck;
+// var User = require('../models').Truck;
 
 //this is the users_controller.js file
 router.get('/signup-signin', function(req,res) {
@@ -39,112 +39,112 @@ router.get('/sign-up', function(req,res) {
 
 
 
-router.post("/sign-up", function(req, res) {
-  User.find({
-    email: req.body.email
-  }, function(err, users) {
-    if (users.length > 0){
-      console.log(users)
-      res.send('we already have an email or username for this account')
-    }else{
+// router.post("/sign-up", function(req, res) {
+//   User.find({
+//     email: req.body.email
+//   }, function(err, users) {
+//     if (users.length > 0){
+//       console.log(users)
+//       res.send('we already have an email or username for this account')
+//     }else{
 
-      bcrypt.genSalt(10, function(err, salt) {
-        bcrypt.hash(req.body.password, salt, function(err, hash) {
+//       bcrypt.genSalt(10, function(err, salt) {
+//         bcrypt.hash(req.body.password, salt, function(err, hash) {
       
-      var truck = new User({
-        username: req.body.username,
-        password_hash: hash,
-        email: req.body.email,
-        firstName: req.body.firstName,
-        lastName: req.body.lastName
+//       var truck = new User({
+//         username: req.body.username,
+//         password_hash: hash,
+//         email: req.body.email,
+//         firstName: req.body.firstName,
+//         lastName: req.body.lastName
 
-      });
+//       });
 
-      truck.save(function(err) {
+//       truck.save(function(err) {
 
-        console.log("truck is trying to save11111")
+//         console.log("truck is trying to save11111")
 
-        if(err) throw err;
+//         if(err) throw err;
 
-        req.session.logged_in = true;
-        // the username to the session
-        req.session.username = truck.username;
-        // and the user's email.
-        req.session.user_email = truck.email;
+//         req.session.logged_in = true;
+//         // the username to the session
+//         req.session.username = truck.username;
+//         // and the user's email.
+//         req.session.user_email = truck.email;
 
-        req.session.firstName = truck.firstName;
+//         req.session.firstName = truck.firstName;
 
-        req.session.lastName = truck.lastName;
-
-
-        res.render('trucks/index', {
-          email: req.session.user_email,
-          logged_in: req.session.logged_in,
-          username: req.session.username,
-          firstName: req.session.firstName,
-          lastName: req.session.lastName
-
-            });
-          });
-        });
-      });
-    };
-  });
-});
+//         req.session.lastName = truck.lastName;
 
 
-router.post("/sign-in", function(req, res) {
-  User.find({email: req.body.email}, function(err, users) {
-    if(err){
-      res.render('trucks/test', {
-      layout: 'main-registration'
-      })
-    };
-    if(users.length > 1) throw new Error("More than one user with the same name!");
+//         res.render('trucks/index', {
+//           email: req.session.user_email,
+//           logged_in: req.session.logged_in,
+//           username: req.session.username,
+//           firstName: req.session.firstName,
+//           lastName: req.session.lastName
 
-    var user = users[0];
-  if(user){
-    user.validatePassword(req.body.password, function(err, success) {
-      if(err) throw err;
-          if(err) throw new Error("Something is wrong with your account.");
+//             });
+//           });
+//         });
+//       });
+//     };
+//   });
+// });
 
-      if(success) {
 
-        req.session.logged_in = true;
-        // the username to the session
-        req.session.username = user.username;
-        // and the user's email.
-        req.session.user_email = user.email;
+// router.post("/sign-in", function(req, res) {
+//   User.find({email: req.body.email}, function(err, users) {
+//     if(err){
+//       res.render('trucks/test', {
+//       layout: 'main-registration'
+//       })
+//     };
+//     if(users.length > 1) throw new Error("More than one user with the same name!");
 
-        req.session.firstName = user.firstName;
+//     var user = users[0];
+//   if(user){
+//     user.validatePassword(req.body.password, function(err, success) {
+//       if(err) throw err;
+//           if(err) throw new Error("Something is wrong with your account.");
 
-        req.session.lastName = user.lastName;
+//       if(success) {
 
-        res.render('trucks/index', {
-          email: req.session.user_email,
-          logged_in: req.session.logged_in,
-          username: req.session.username,
-          firstName: req.session.firstName,
-          lastName: req.session.lastName
-        });
-      } else {
-        req.session.logged_in = false;
-        res.redirect("/");
-      }
-    });
-  }
-  });
-});
+//         req.session.logged_in = true;
+//         // the username to the session
+//         req.session.username = user.username;
+//         // and the user's email.
+//         req.session.user_email = user.email;
 
-router.get("/sign-out", function(req,res) {
- var username = req.session.username
-  req.session.destroy(function(err) {
-      User.update({username: username}, {loggedin:false}, 
-    function(err, num) {
-        console.log("loggedout "+username);
-    });
-     res.redirect("/")
-  })
-});
+//         req.session.firstName = user.firstName;
+
+//         req.session.lastName = user.lastName;
+
+//         res.render('trucks/index', {
+//           email: req.session.user_email,
+//           logged_in: req.session.logged_in,
+//           username: req.session.username,
+//           firstName: req.session.firstName,
+//           lastName: req.session.lastName
+//         });
+//       } else {
+//         req.session.logged_in = false;
+//         res.redirect("/");
+//       }
+//     });
+//   }
+//   });
+// });
+
+// router.get("/sign-out", function(req,res) {
+//  var username = req.session.username
+//   req.session.destroy(function(err) {
+//       User.update({username: username}, {loggedin:false}, 
+//     function(err, num) {
+//         console.log("loggedout "+username);
+//     });
+//      res.redirect("/")
+//   })
+// });
 
 module.exports = router;
