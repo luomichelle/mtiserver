@@ -67,55 +67,55 @@ router.get('/projectsix', function(req,res) {
 
 //===========================chineseeee
 
-router.get('/index', function(req,res) {
+router.get('/chinese', function(req,res) {
   res.render('cn/index', {
     layout: 'cn-registration'
   });
 });
 
-router.get('/cn/about', function(req,res) {
+router.get('/cnabout', function(req,res) {
   res.render('cn/about', {
     layout: 'cn-registration'
   });
 });
 
-router.get('/cn/services', function(req,res) {
+router.get('/cnservices', function(req,res) {
   res.render('cn/services', {
     layout: 'cn-registration'
   });
 });
 
-router.get('/cn/contact', function(req,res) {
+router.get('/cncontact', function(req,res) {
   res.render('cn/contact', {
     layout: 'cn-registration'
   });
 });
-router.get('/cn/projectone', function(req,res) {
+router.get('/cnprojectone', function(req,res) {
   res.render('cn/projectone', {
     layout: 'cn-registration'
   });
 });
-router.get('/cn/projecttwo', function(req,res) {
+router.get('/cnprojecttwo', function(req,res) {
   res.render('cn/projecttwo', {
     layout: 'cn-registration'
   });
 });
-router.get('/cn/projectthree', function(req,res) {
+router.get('/cnprojectthree', function(req,res) {
   res.render('cn/projectthree', {
     layout: 'cn-registration'
   });
 });
-router.get('/cn/projectfour', function(req,res) {
+router.get('/cnprojectfour', function(req,res) {
   res.render('cn/projectfour', {
     layout: 'cn-registration'
   });
 });
-router.get('/cn/projectfive', function(req,res) {
+router.get('/cnprojectfive', function(req,res) {
   res.render('cn/projectfive', {
     layout: 'cn-registration'
   });
 });
-router.get('/cn/projectsix', function(req,res) {
+router.get('/cnprojectsix', function(req,res) {
   res.render('cn/projectsix', {
     layout: 'cn-registration'
   });
