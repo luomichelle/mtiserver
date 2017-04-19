@@ -120,5 +120,47 @@ router.get('/cnprojectsix', function(req,res) {
     layout: 'cn-registration'
   });
 });
+router.get('/cnprojectseven', function(req,res) {
+  res.render('cn/projectseven', {
+    layout: 'cn-registration'
+  });
+});
+router.get('/cnprojecteight', function(req,res) {
+  res.render('cn/projecteight', {
+    layout: 'cn-registration'
+  });
+});
+router.get('/cnprojectnine', function(req,res) {
+  res.render('cn/projectnine', {
+    layout: 'cn-registration'
+  });
+});
+router.get('/cnprojectten', function(req,res) {
+  res.render('cn/projectten', {
+    layout: 'cn-registration'
+  });
+});
+
+
+
+
+//subpages:
+router.get('/cnprojectone-page2', function(req,res) {
+  res.render('cn/projectone-page2', {
+    layout: 'cn-registration'
+  });
+});
+
+router.get('/cnprojectone-page3', function(req,res) {
+  res.render('cn/projectone-page3', {
+    layout: 'cn-registration'
+  });
+});
+
+router.get('/cnprojecttwo-page2', function(req,res) {
+  res.render('cn/projecttwo-page2', {
+    layout: 'cn-registration'
+  });
+});
 
 module.exports = router;
