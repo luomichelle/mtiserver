@@ -5,7 +5,7 @@ var server = require('http').Server(app);
 
 
 router.get('/', function(req, res) { 
-	res.redirect('/index');
+	res.redirect('/chinese');
 });
 
 router.get('/index', function(req,res) {
