@@ -73,11 +73,21 @@ router.get('/chinese', function(req,res) {
   });
 });
 
+
+
+
 router.get('/cnabout', function(req,res) {
   res.render('cn/about', {
     layout: 'cn-registration'
   });
 });
+
+router.get('/lasvegasnews', function(req,res) {
+  res.render('cn/lasvegasnews', {
+    layout: 'cn-registration'
+  });
+});
+
 
 router.get('/cnservices', function(req,res) {
   res.render('cn/services', {
