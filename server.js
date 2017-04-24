@@ -26,7 +26,10 @@ app.use(session({ secret: 'app', cookie: { maxAge: null }}));
 app.use(cookieParser());
 
 // View engine setup
+
 app.set('views', path.join(__dirname, 'views'));
+
+
 
 // Set up handlebars
 var exphbs = require('express-handlebars');

@@ -17,15 +17,17 @@
     "debug": "^2.2.0",
     "express": "~4.13.1",
     "express-handlebars": "^2.0.1",
+    "express-less": "^0.1.0",
     "express-session": "^1.14.1",
     "gulp-nodemon": "^2.2.1",
     "jsonwebtoken": "^7.1.9",
+    "less-express": "^1.1.0",
     "method-override": "^2.3.5",
     "morgan": "~1.6.1",
     "nodemailer": "^1.5.0",
-    "serve-favicon": "~2.3.0",
     "serve-favicon": "^2.3.2",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "less-middleware": "*"
   },
   "description": "This repository demonstrates the usage of sequelize within an express application.\r The implemented logic is a simple task tracking tool.",
   "keywords": []
