@@ -13,14 +13,17 @@ body {
 }
 .img-portfolio {
   margin-bottom: 30px;
-}
-
-.miniimg{
   text-align: center;
-  margin: auto;
 }
 .img-hover:hover {
   opacity: 0.8;
+}
+.carousel-inner > .item > a > img,
+.carousel-inner > .item > img,
+.img-responsive,
+.thumbnail a > img,
+.thumbnail > img {
+  display: inline-block;
 }
 .text-muted {
   color: #777777;
@@ -143,6 +146,9 @@ footer {
 .slidetitle {
   font-size: 300%;
 }
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #8a6d3b;
+}
 .portfolio-modal .modal-dialog {
   margin: 0;
   height: 100%;
@@ -220,10 +226,7 @@ footer {
 /* Responsive Styles */
 @media (max-width: 991px) {
   .navmsg {
-    display: none;
-  }
-  .navmsg #brandID {
-    display: none;
+    font-size: 20%;
   }
   .navmsg #brandname {
     display: block;

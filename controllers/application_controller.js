@@ -150,10 +150,6 @@ router.get('/cnprojectten', function(req,res) {
     layout: 'cn-registration'
   });
 });
-
-
-
-
 //subpages:
 router.get('/cnprojectone-page2', function(req,res) {
   res.render('cn/projectone-page2', {
@@ -169,6 +165,30 @@ router.get('/cnprojectone-page3', function(req,res) {
 
 router.get('/cnprojecttwo-page2', function(req,res) {
   res.render('cn/projecttwo-page2', {
+    layout: 'cn-registration'
+  });
+});
+
+router.get('/cnlasvegaseducation', function(req,res) {
+  res.render('cn/cnlasvegaseducation', {
+    layout: 'cn-registration'
+  });
+});
+
+router.get('/cnlasvegasetravel', function(req,res) {
+  res.render('cn/cnlasvegasetravel', {
+    layout: 'cn-registration'
+  });
+});
+
+router.get('/investinlv', function(req,res) {
+  res.render('cn/investinlv', {
+    layout: 'cn-registration'
+  });
+});
+
+router.get('/cnlasvegashotel', function(req,res) {
+  res.render('cn/cnlasvegashotel', {
     layout: 'cn-registration'
   });
 });
