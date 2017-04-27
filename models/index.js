@@ -2,7 +2,7 @@
 
 var fs        = require("fs");
 var path      = require("path");
-var mongoose  = require("mongoose");
+// var mongoose  = require("mongoose");
 var env       = process.env.NODE_ENV || "development";
 var config    = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
 var mongoUrl;
@@ -20,9 +20,9 @@ if(process.env.MONGODB_URI != undefined) {
   mongoUrl = config.mongo_url;
 }
 
-mongoose.connect(mongoUrl,function() {
-    console.log("Connected to Database");
-});
+// mongoose.connect(mongoUrl,function() {
+//     console.log("Connected to Database");
+// });
 
 var db = {};
 

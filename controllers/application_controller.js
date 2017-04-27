@@ -88,6 +88,12 @@ router.get('/lasvegasnews', function(req,res) {
   });
 });
 
+router.get('/lasvegasgov', function(req,res) {
+  res.render('cn/lasvegasgov', {
+    layout: 'cn-registration'
+  });
+});
+
 
 router.get('/cnservices', function(req,res) {
   res.render('cn/services', {
