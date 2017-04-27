@@ -3,6 +3,11 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+@font-face {
+  font-family: 'tishu';
+  src: url('tishu.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 html,
 body {
   height: 100%;
@@ -125,6 +130,8 @@ footer {
 .navbar-brand .navmsg #brandname {
   width: 120%;
   display: block;
+  font-family: tishu;
+  font-weight: 800;
 }
 .navbar-brand .responsivebrand {
   display: none;
