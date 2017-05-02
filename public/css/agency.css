@@ -233,7 +233,7 @@ footer {
 /* Responsive Styles */
 @media (max-width: 991px) {
   .navmsg {
-    font-size: 20%;
+    font-size: 50%;
   }
   .navmsg #brandname {
     display: block;
