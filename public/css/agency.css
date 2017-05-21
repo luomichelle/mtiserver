@@ -287,6 +287,9 @@ footer {
 .teammsg li {
   padding: 2%;
 }
+.teammsg li a {
+  color: #8a6d3b;
+}
 .teammsg li .herf {
   color: #b1b0b0;
 }
