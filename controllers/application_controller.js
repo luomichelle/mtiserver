@@ -62,7 +62,11 @@ router.get('/projectsix', function(req,res) {
   });
 });
 
-
+router.get('/album', function(req,res) {
+  res.render('en/albums', {
+    layout: 'main-registration'
+  });
+});
 
 
 //===========================chineseeee
@@ -199,4 +203,9 @@ router.get('/cnlasvegashotel', function(req,res) {
   });
 });
 
+router.get('/cnalbum', function(req,res) {
+  res.render('cn/albums', {
+    layout: 'cn-registration'
+  });
+});
 module.exports = router;

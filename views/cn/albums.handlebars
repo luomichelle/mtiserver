@@ -1,0 +1,584 @@
+<style>
+
+.mySlides {
+  display: none;
+}
+.demo {
+  cursor: pointer;
+}
+.bigimg {
+}
+.bigimg .col-md-9 .mySlides {
+  width: 100%;
+}
+.carousel-inner1 {
+  padding-left: 30%;
+}
+.carousel-inner2 {
+  display: -webkit-inline-box;
+  display: inline-block;
+  width: auto;
+}
+.carousel-controlproject .left .right .carousel-control:focus,
+.carousel-control.right,
+.carousel-control.left,
+.carousel-control:hover {
+  background-image: none;
+}
+.customizeimg {
+  position: relative;
+  z-index: 555;
+  margin-bottom: 19%;
+}
+.customizeimg img {
+  width: 100%;
+}
+.customizeimg .filmtitle {
+  font-size: 30px;
+  font-weight: 700;
+}
+.customizeimg .filmtitle img {
+  margin-right: 4%;
+  width: 8%;
+  height: 27px;
+  vertical-align: baseline;
+}
+.customizeimg .filmtitle:before {
+
+}
+.customizeimg .description {
+  padding: 3%;
+  line-height: 3;
+  font-size: 15px;
+  text-align: center;
+  padding-top:0px;
+}
+#carousel-example-generic {
+  margin: 20px auto;
+  width: 400px;
+}
+.slidersizer {
+  width: 100%;
+  margin-left: 6%;
+  float: left;
+  margin-right: 1%;
+}
+.customizedindicator {
+  width: 80%;
+  margin-left: 6%;
+  display: inline-block;
+}
+.leftClick img {
+  position: relative;
+  transform: rotate(180);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  bottom: 103px;
+}
+#carousel-custom .carousel-indicators {
+  margin: 3%;
+  overflow: hidden;
+  position: static;
+  text-align: left;
+  white-space: nowrap;
+  width: 80%;
+  margin-left: 3%;
+  margin-top: 0%;
+}
+#carousel-custom .carousel-indicators li {
+  background-color: transparent;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  display: inline-block;
+  height: auto;
+  margin: 0 !important;
+  width: auto;
+  box-shadow: inset 0 0 0 1000px rgba(224, 46, 46, 0.77);
+}
+#carousel-custom .carousel-indicators li img {
+  display: block;
+  opacity: 0.5;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+#carousel-custom .carousel-indicators li .active img {
+  opacity: 1;
+}
+#carousel-custom .carousel-indicators li:hover img {
+  opacity: 0.75;
+}
+#carousel-custom .carousel-outer {
+  position: relative;
+}
+#carousel-custom .carousel-outer .carousel-inner {
+  padding-left: 0%;
+}
+#carousel-custom .carousel-indicators li.active img {
+  opacity: 1;
+}
+.teamheaders .container .row .text-center .section-heading {
+  padding-top: 114px;
+  padding-bottom: 90px;
+  font-size: 37px;
+  font-family: TeluguBold;
+  letter-spacing: 0.75px;
+}
+.teamheaders .container .row .col-lg-12 .row .col-md-4 .teambox img {
+  width: 215px;
+}
+.teamintro {
+  margin-top: 40px;
+  list-style-type: none;
+  color: black;
+}
+.teamintro span.title {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-family: TeluguBold;
+  letter-spacing: 0.42px;
+}
+.teamintro span.title img {
+  width: 30px;
+  height: auto;
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+.teamintro .description {
+  font-style: italic;
+  margin-bottom: 5%;
+}
+.teamintro .body {
+  margin-bottom: 4%;
+}
+.teamintro .representwork {
+  margin-bottom: 105px;
+}
+
+@media (max-width: 1003px) {
+  #navcontainer {
+    margin-left: 0%;
+  }
+  #navcontainer .navbar-header {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  #navcontainer .navbar-header #babuheaders {
+    background: #cb2f30;
+    width: 133px;
+    height: 54px;
+  }
+  #navcontainer .navbar-header #babuheaders img {
+    background: #cb2f30;
+    width: 133px;
+    height: 54px;
+  }
+  .navbar-custom .navbar-brand {
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  }
+  .navbar-custom .navbar-collapse {
+    border-color: rgba(255, 255, 255, 0.02);
+  }
+  .navbar-custom .navbar-toggle:hover,
+  .navbar-custom .navbar-toggle:focus {
+    color: #cb2f30;
+    background-color: transparent;
+  }
+  .navbar-custom .nav {
+    border: none;
+  }
+  .navbar-custom .nav li a {
+    font-family: openSans-Regular, sans-serif, "Montserrat", "Helvetica Neue", Helvetica, Arial;
+    text-transform: uppercase;
+    font-family: Telugu;
+  }
+  .navbar-custom .nav li a:hover,
+  .navbar-custom .nav li a:focus {
+    color: #656565;
+    outline: none;
+  }
+  .navbar-custom .navbar-nav > .active > a {
+    border-radius: 0;
+    color: white;
+    background-color: transparent;
+    font-family: TeluguBold;
+  }
+  .navbar-custom .navbar-nav > .active > a:hover,
+  .navbar-custom .navbar-nav > .active > a:focus {
+    color: white;
+    background-color: transparent;
+    font-family: TeluguBold;
+  }
+  #home .row {
+    margin: 0;
+    margin-top: 10px;
+  }
+  #home .row img.brandletter {
+    width: 320px;
+    position: relative;
+    float: left;
+    right: 3%;
+    display: none;
+  }
+  #home .row .intro-text {
+    position: relative;
+    right: 0px;
+    top: 50px;
+    padding: 6%;
+  }
+  #home .row .intro-text .headerside {
+    font-family: Telugu;
+    line-height: 200%;
+    z-index: 888;
+    padding-right: 0%;
+  }
+  #home .row .intro-text .headerside .headtitle {
+    display: none;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 27px;
+    line-height: 200%;
+    letter-spacing: 0.75px;
+  }
+  #home .row .intro-text .headerside .headtitle span.spanone {
+    letter-spacing: 2.3px;
+  }
+  #home .row .intro-text .headerside .headtitle span.spantwo {
+    letter-spacing: 4.3px;
+  }
+  #home .row .intro-text .headerside .headtitle span.spanthree {
+    letter-spacing: 0.75px;
+    color: #383838;
+    font-size: 15px;
+    line-height: 100%;
+    text-transform: none;
+    display: block;
+  }
+  #home .row .intro-text .headerside .headtitleresponsive {
+    text-transform: uppercase;
+    display: block;
+    font-size: 108%;
+    color: #000;
+    letter-spacing: .5px;
+    text-align: justify;
+  }
+  #home .row .intro-text .headerside .headtitleresponsive span {
+    text-transform: lowercase;
+    font-size: 12px;
+    color: #000000;
+    text-align: justify;
+    letter-spacing: 0px;
+    line-height: 0;
+  }
+  #home .row .intro-text .headerside .headbody2 {
+    letter-spacing: 0.75px;
+    color: #383838;
+    font-size: 15px;
+    display: none;
+  }
+  #home .row .intro-text .headerside .headbody {
+    margin-top: 15px;
+    text-align: left;
+  }
+  #home .row .intro-text .headerside .headbody img {
+    width: 16px;
+    height: 18px;
+  }
+  #home .row .intro-text .headerside .headbody #ourstory,
+  #home .row .intro-text .headerside .headbody span {
+    margin-right: 1px;
+    font-family: Telugu;
+    font-size: 15px;
+    text-transform: initial;
+  }
+  #home .row img.brandletterresponsive {
+    display: block;
+    width: 100%;
+    position: relative;
+    float: left;
+    padding: 4%;
+    top: 30px;
+  }
+  section#services {
+    bottom: 0px;
+  }
+  section#services .row .servicebox {
+    margin-top: 75px;
+  }
+  section#services .row .servicebox .section-heading {
+    font-size: 17px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  section#services .text-center {
+    padding: 0%;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  section#services .filmbox {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    font-size: 27px;
+    font-family: Telugu;
+    letter-spacing: .53px;
+  }
+  section#services .filmbox span {
+    color: white;
+    background: black;
+    border-bottom: 2px solid #cb2f30;
+    font-size: 15px;
+    color: #ffffff;
+    letter-spacing: 0.42px;
+    text-align: left;
+  }
+  section#services .filmbox span:after {
+    content: '_';
+    position: absolute;
+    background: black;
+    color: black;
+  }
+  section#services .filmbox #film {
+    width: 20px;
+    height: 20px;
+    margin-right: 4%;
+  }
+  section#services .filmbox #video {
+    width: 22px;
+    height: 16px;
+    margin-right: 4%;
+  }
+  section#services .filmbox #vr {
+    width: 23px;
+    height: 13px;
+    margin-right: 4%;
+  }
+  section#services .filmbox .filmbody {
+    display: -webkit-inline-box;
+    font-size: 12px;
+    color: #ffffff;
+    letter-spacing: 0;
+    text-align: center;
+    font-family: OpenSans-Regular;
+  }
+  section#services .progressbar {
+    margin-bottom: 0%;
+    font-family: openSans-Regular;
+    font-size: 12px;
+    color: #ffffff;
+    letter-spacing: 0;
+  }
+  section#services .progressbar span {
+    padding: 2%;
+  }
+  #work {
+    padding-top: 0px;
+  }
+  #work .movieintro {
+    padding-top: 0%;
+    margin-bottom: 0px;
+    padding-top: 25px;
+  }
+  #work .movieintro .section-heading {
+    margin-bottom: 0px;
+    font-family: TeluguBold;
+    font-size: 17px;
+    color: #000000;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+ 
+  .projectheader .row {
+    padding: 0%;
+    margin: 0%;
+  }
+  .projectheader .row .text-center .section-heading {
+    padding-top: 10%;
+    padding-bottom: 4%;
+    font-family: TeluguBold;
+    font-size: 37px;
+    letter-spacing: 0.75px;
+  }
+  .customizeimg {
+    position: relative;
+    float: right;
+    z-index: 555;
+    top: 11px;
+    margin-bottom: 0%;
+  }
+  .customizeimg img {
+    width: 100%;
+  }
+  .customizeimg .filmtitle {
+    font-weight: 700;
+    font-size: 17px;
+    color: #000000;
+    text-align: left;
+  }
+  .customizeimg .filmtitle img {
+    margin-right: 4%;
+    width: 8%;
+    height: 27px;
+    vertical-align: baseline;
+  }
+  .customizeimg .filmtitle:before {
+    content: "";
+    position: absolute;
+    width: 21%;
+    border-bottom: 3px solid #cb2f30;
+    top: -19px;
+  }
+  .customizeimg .description {
+    padding: 0%;
+    line-height: 3;
+    font-size: 15px;
+    padding-top: 0%;
+    font-size: 12px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 11%;
+  }
+  #carousel-example-generic {
+    margin: 20px auto;
+    width: 400px;
+  }
+  .slidersizer {
+    width: auto;
+    margin-left: 5%;
+    float: left;
+    margin-right: 5%;
+  }
+  .customizedindicator {
+    display: none;
+    width: 80%;
+    margin-left: 6%;
+    display: inline-block;
+  }
+  .leftClick img {
+    position: relative;
+    transform: rotate(180);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    bottom: 103px;
+    display: none;
+  }
+  #carousel-custom .carousel-indicators {
+    display: none;
+    margin: 3%;
+    overflow: hidden;
+    position: static;
+    text-align: left;
+    white-space: nowrap;
+    width: 80%;
+    margin-left: 6%;
+    margin-top: 0%;
+  }
+  #carousel-custom .carousel-indicators li {
+    background-color: transparent;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    display: inline-block;
+    height: auto;
+    margin: 0 !important;
+    width: auto;
+    box-shadow: inset 0 0 0 1000px rgba(224, 46, 46, 0.77);
+  }
+  #carousel-custom .carousel-indicators li img {
+    display: block;
+    opacity: 0.5;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+  }
+  #carousel-custom .carousel-indicators li .active img {
+    opacity: 1;
+  }
+  #carousel-custom .carousel-indicators li:hover img {
+    opacity: 0.75;
+  }
+  #carousel-custom .carousel-outer {
+    position: relative;
+  }
+  #carousel-custom .carousel-outer .carousel-inner { 
+    padding-left: 0%;
+  }
+  #carousel-custom .carousel-indicators li.active img {
+    opacity: 1;
+  }
+
+
+</style>
+
+    <div class="clearfix"></div>
+    <section id="project"  class="projectheader" style="margin-top:5%;">
+        <div class="row projectpage">
+            <div class="bigimg col-lg-6"> 
+                    <div id='carousel-custom' class='carousel slide' data-ride='carousel'>
+                        <div class='carousel-outer slidersizer'>
+                             <!-- Wrapper for slides -->
+                            <div class='carousel-inner carousel-inner1'>
+                                <div class='item active'>
+                                    <img src="data1/images/1.jpg" alt='' />
+                                </div>
+                            <div class='item'>
+                                <img src="data1/images/1.jpg" alt='' />
+                            </div>
+                            <div class='item'>
+                                <img src="data1/images/2.jpg" alt='' />
+                            </div>
+                
+                            <div class='item'>
+                                <img src="data1/images/3.jpg" alt='' />
+                            </div> 
+                            <div class='item'>
+                                <img src="data1/images/4.jpg" alt='' />
+                            </div>
+                            <div class='item'>
+                                <img src="data1/images/5.jpg" alt='' />
+                             </div>
+            
+                            <div class='item'>
+                                <img src="data1/images/6.jpg" alt='' />
+                            </div>
+                            <div class='item'>
+                                <img src="data1/images/7.jpg" alt='' /> 
+                            </div>
+                            <div class='item'>
+                                <img src="data1/images/8.jpg" alt='' />
+                            </div>
+                        </div>
+            
+                        <!-- Controls -->
+                        <a class='left carousel-control' href='#carousel-custom' data-slide='prev'>
+                            <span class='glyphicon glyphicon-chevron-left'></span>
+                        </a>
+                        <a class='right carousel-control' href='#carousel-custom' data-slide='next'>
+                            <span class='glyphicon glyphicon-chevron-right'></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="customizeimg">
+                 <div class="col-lg-6 col-md-12">
+                            <div class="description">
+                                <div class="filmtitle">影視回放</div>
+                                    什麼場合
+                            <br>
+                                    什麼日子
+                            <br>
+                                    簡單介紹： 
+
+                            <br>
+                            <br>
+                                    blabla
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
